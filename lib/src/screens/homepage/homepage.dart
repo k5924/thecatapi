@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Cat> cats = [];
   int pageNumber = 1;
   bool hasMore = true;
-  bool isLoading = true;
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (result.length < 2) {
           hasMore = false;
         }
-        cats.addAll(result);
+        cats = result;
       });
     }
   }

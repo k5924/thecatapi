@@ -21,9 +21,7 @@ class TheCatAPI {
     } else {
       result.forEach((element){
         final String imageUrl = element["url"];
-        final int width = element["width"];
-        final int height = element["height"];
-        final Cat cat = Cat(url: imageUrl, width: width, height: height);
+        final Cat cat = Cat(url: imageUrl);
         cats.add(cat);
       });
       return cats;
